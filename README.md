@@ -12,6 +12,15 @@ go get -u https://github.com/gouniverse/uid
  
  ```
  humanUID := uid.HumanUid()
+ 
+ // NanoUid generates a UID (23 digits) Format: YYYYMMDD-HHMMSS-MMMMMM-NNN
+humanUID := uid.NanoUid()
+
+// MicroUid generates a UID (20 digits) Format: YYYYMMDD-HHMMSS-MMMMMM
+microidUID := uid.MicroUid()
+
+// SecUid generates UID (14 digits) Format: YYYYMMDD-HHMMSS
+secondsUID := uid.SecUid()
  ```
 
 ## Supported UID Types
