@@ -8,6 +8,12 @@ Go Uid generates unique identifying strings. Largest attention is paid on human 
 go get -u https://github.com/gouniverse/uid
 ```
 
+## Usage
+ 
+ ```
+ humanUID := uid.HumanUid()
+ ```
+
 ## Supported UID Types
 
 It supports several types of unique identifiers. The type you may want to use depends on how random and long you want the identifier to be. For most of the user cases a Micro UUID (20 chars) should be fine. A human UUID (32 chars) should almost never be used where a human is involved as too "mind bogling" to work with.
@@ -42,8 +48,3 @@ It supports several types of unique identifiers. The type you may want to use de
 
     20171119084926 (with dashes: 20171119-084926)
     
- ## Usage
- 
- ```
- humanUID := uid.HumanUid()
- ```
