@@ -11,6 +11,7 @@ go get -u https://github.com/gouniverse/uid
 ## Usage
  
  ```
+ // HumainUid generates a UUID (32 digits) Format: YYYYMMDD-HHMM-SSMM-MMMMRRRRRRRRRRR
  humanUID := uid.HumanUid()
  
  // NanoUid generates a UID (23 digits) Format: YYYYMMDD-HHMMSS-MMMMMM-NNN
