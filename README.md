@@ -1,6 +1,12 @@
-# Go Uid
+# Go Uid (Unique ID)
 
 Go Uid generates unique identifying strings. Largest attention is paid on human friendly unique identifiers (dated digits).
+
+## Installation
+
+```
+go get -u https://github.com/gouniverse/uid
+```
 
 ## Supported UID Types
 
@@ -35,3 +41,9 @@ It supports several types of unique identifiers. The type you may want to use de
     Examples:
 
     20171119084926 (with dashes: 20171119-084926)
+    
+ ## Usage
+ 
+ ```
+ humanUID := uid.HumanUid()
+ ```
