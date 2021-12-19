@@ -1,5 +1,11 @@
 # Go Uid (Unique ID)
 
+# Session Store
+
+[![Tests Status](https://github.com/gouniverse/uid/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/gouniverse/uid/actions/workflows/test.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/gouniverse/uid)](https://goreportcard.com/report/github.com/gouniverse/uid)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/gouniverse/uid)](https://pkg.go.dev/github.com/gouniverse/uid)
+
 Go Uid generates unique identifying strings. Largest attention is paid on human friendly unique identifiers (dated digits).
 
 ## Installation
