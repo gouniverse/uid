@@ -58,3 +58,7 @@ It supports several types of unique identifiers. The type you may want to use de
 
     20171119084926 (with dashes: 20171119-084926)
     
+
+## Change Log
+
+2021.12.19 - Added tests

@@ -39,5 +39,5 @@ func SecUid() string {
 	id := time.Now().UTC().Format("20060102150405.0000000")
 	id = strings.ReplaceAll(id, ".", "")
 	id += r.String()
-	return id[0:23]
+	return id[0:14]
 }
