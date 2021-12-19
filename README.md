@@ -61,4 +61,5 @@ It supports several types of unique identifiers. The type you may want to use de
 
 ## Change Log
 
+2021.12.19 - Master branch changed to main
 2021.12.19 - Added tests
