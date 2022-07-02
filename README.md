@@ -67,3 +67,7 @@ It supports several types of unique identifiers. The type you may want to use de
 
 2021.12.19 - Master branch changed to main
 2021.12.19 - Added tests
+
+## Similar Packages
+
+- https://github.com/jaevor/go-nanoid (random 21 characters)
