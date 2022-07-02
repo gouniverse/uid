@@ -71,3 +71,7 @@ It supports several types of unique identifiers. The type you may want to use de
 ## Similar Packages
 
 - https://github.com/jaevor/go-nanoid (random 21 characters)
+- https://github.com/zheng-ji/goSnowFlake (timestamp-workerid-sequence)
+- https://github.com/damdo/randid (random IDs)
+- https://github.com/matthewmueller/uid.go (shorcodes)
+- https://github.com/aohorodnyk/uid (random IDs)
