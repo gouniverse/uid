@@ -77,3 +77,4 @@ It supports several types of unique identifiers. The type you may want to use de
 - https://github.com/aohorodnyk/uid (random IDs)
 - https://github.com/google/uuid (UUIDs)
 - https://github.com/oklog/ulid (???)
+- https://github.com/chilts/sid (setial IDs)
