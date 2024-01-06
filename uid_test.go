@@ -2,7 +2,6 @@ package uid
 
 import (
 	"testing"
-	"time"
 )
 
 func TestHumanUid(t *testing.T) {
@@ -14,7 +13,7 @@ func TestHumanUid(t *testing.T) {
 	}
 
 	if len(humanUid) != 32 {
-		t.Fatal("Human UID length must be 32 charcters")
+		t.Fatal("Human UID length must be 32 characters")
 	}
 
 	if humanUid == humanUid2 {
@@ -70,7 +69,7 @@ func TestNanoUid(t *testing.T) {
 
 func TestSecUid(t *testing.T) {
 	secUid := SecUid()
-	time.Sleep(time.Second) // as its a seconds based ID we need at least a second between the generation
+	// time.Sleep(time.Second) // as its a seconds based ID we need at least a second between the generation
 	secUid2 := SecUid()
 
 	if secUid == "" {
@@ -87,5 +86,102 @@ func TestSecUid(t *testing.T) {
 
 	if secUid > secUid2 {
 		t.Fatal("Sec UID 1 must be smaller than sec UID 2")
+	}
+}
+
+func TestTimestamp(t *testing.T) {
+	ts1 := Timestamp()
+	ts2 := Timestamp()
+
+	if ts1 == "" {
+		t.Fatal("Timestamp must not be null")
+	}
+
+	if len(ts1) != 10 {
+		t.Fatal("Timestamp length must be 10 characters, found: ", len(ts1))
+	}
+
+	if ts1 == ts2 {
+		t.Fatal("Timestamp 1 and Timestamp 2 must not be the same")
+	}
+
+	if ts1 > ts2 {
+		t.Fatal("Timestamp 1 must be smaller than Timestamp 2")
+	}
+}
+
+func TestTimestampMicro(t *testing.T) {
+	ts1 := TimestampMicro()
+	ts2 := TimestampMicro()
+
+	if ts1 == "" {
+		t.Fatal("Timestamp must not be null")
+	}
+
+	if len(ts1) != 16 {
+		t.Fatal("Timestamp length must be 16 characters, found: ", len(ts1))
+	}
+
+	if ts1 == ts2 {
+		t.Fatal("Timestamp 1 and Timestamp 2 must not be the same")
+	}
+
+	if ts1 > ts2 {
+		t.Fatal("Timestamp 1 must be smaller than Timestamp 2")
+	}
+}
+
+func TestTimestampNano(t *testing.T) {
+	ts1 := TimestampNano()
+	ts2 := TimestampNano()
+
+	if ts1 == "" {
+		t.Fatal("Timestamp must not be null")
+	}
+
+	if len(ts1) != 19 {
+		t.Fatal("Timestamp length must be 19 characters, found: ", len(ts1))
+	}
+
+	if ts1 == ts2 {
+		t.Fatal("Timestamp 1 and Timestamp 2 must not be the same")
+	}
+
+	if ts1 > ts2 {
+		t.Fatal("Timestamp 1 must be smaller than Timestamp 2")
+	}
+}
+
+func TestUuid(t *testing.T) {
+	uuid1 := Uuid()
+	uuid2 := Uuid()
+
+	if uuid1 == "" {
+		t.Fatal("Uuid must not be null")
+	}
+
+	if len(uuid1) != 32 {
+		t.Fatal("Uuid length must be 32 characters, found: ", len(uuid1))
+	}
+
+	if uuid1 == uuid2 {
+		t.Fatal("Uuid 1 and Timestamp 2 must not be the same")
+	}
+}
+
+func TestUuidFormatted(t *testing.T) {
+	uuid1 := UuidFormatted()
+	uuid2 := UuidFormatted()
+
+	if uuid1 == "" {
+		t.Fatal("Uuid must not be null")
+	}
+
+	if len(uuid1) != 36 {
+		t.Fatal("Uuid length must be 36 characters, found: ", len(uuid1))
+	}
+
+	if uuid1 == uuid2 {
+		t.Fatal("Uuid 1 and Timestamp 2 must not be the same")
 	}
 }

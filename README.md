@@ -15,14 +15,14 @@ go get -u https://github.com/gouniverse/uid
 ## Usage
  
  ```
- // HumainUid generates a UUID (32 digits) Format: YYYYMMDD-HHMM-SSMM-MMMMRRRRRRRRRRR
+ // HumanUid generates a UUID (32 digits) Format: YYYYMMDD-HHMM-SSMM-MMMMNNNRRRRRRRRR
  humanUID := uid.HumanUid()
  
  // NanoUid generates a UID (23 digits) Format: YYYYMMDD-HHMMSS-MMMMMM-NNN
 humanUID := uid.NanoUid()
 
 // MicroUid generates a UID (20 digits) Format: YYYYMMDD-HHMMSS-MMMMMM
-microidUID := uid.MicroUid()
+microUID := uid.MicroUid()
 
 // SecUid generates UID (14 digits) Format: YYYYMMDD-HHMMSS
 secondsUID := uid.SecUid()
@@ -30,11 +30,18 @@ secondsUID := uid.SecUid()
 
 ## Supported UID Types
 
-It supports several types of unique identifiers. The type you may want to use depends on how random and long you want the identifier to be. For most of the user cases a Micro UUID (20 chars) should be fine. A human UUID (32 chars) should almost never be used where a human is involved as too "mind bogling" to work with.
+It supports several types of unique identifiers. 
+
+The type you want to use will usually depends on two considerations:
+
+1. How random you want it to be? The longer the identifier, the more the chances of collision reduce
+2. How long you want the identifier to be? The longer the identifier, reduces the readability, as well as the storage space to store it.
+
+For most of the user cases a Micro UUID (20 chars) should be fine. A human UUID (32 chars) should be avoided where a human is involved as too "mind bogging" to work with.
 
 1. Human UUID (32 digits)
 
-    Format: YYYYMMDD-HHMM-SSMM-MMMMRRRRRRRRRRR
+    Format: YYYYMMDD-HHMM-SSMM-MMMMNNNRRRRRRRRR
 
     2017111908492665991498485465 (with dashes: 20171119-0849-2665-991498485465)
 
@@ -61,10 +68,47 @@ It supports several types of unique identifiers. The type you may want to use de
     Examples:
 
     20171119084926 (with dashes: 20171119-084926)
+
+5. Timestamp (10 digits)
+    Unit timestamp, seconds precision
+
+    Format: 1234567890
+
+    Examples:
+
+    1704524414
+
+
+6. TimestampMicro (16 digits)
+    Unit timestamp, microseconds precision
+
+    Format: 1234567890123456
+
+    Examples:
+
+    1704524414548721
+
+6. TimestampNano (19 digits)
+    Unit timestamp, nanoseconds precision
+
+    Format: 1234567890123456789
+
+    Examples:
+
+    1704524414548721308
+
+7. Uuid (32 characters)
+    Random V4 UUID. UUID (Universally Unique IDentifier), also known as GUID (Globally Unique IDentifier)
+
+    Format: abcdef1234567890abcdef1234567890
+
+    Examples:
+
+    459e2999bd071151a23d643da42c2cc2
     
 
 ## Change Log
-
+2024.01.06 - Added Timestamp and Uuid functions
 2021.12.19 - Master branch changed to main
 2021.12.19 - Added tests
 
@@ -77,5 +121,5 @@ It supports several types of unique identifiers. The type you may want to use de
 - https://github.com/aohorodnyk/uid (random IDs)
 - https://github.com/google/uuid (UUIDs)
 - https://github.com/oklog/ulid (???)
-- https://github.com/chilts/sid (setial IDs)
+- https://github.com/chilts/sid (serial IDs)
 - https://datatracker.ietf.org/doc/html/draft-ietf-uuidrev-rfc4122bis (GUID 6?)
