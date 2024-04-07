@@ -123,3 +123,4 @@ For most of the user cases a Micro UUID (20 chars) should be fine. A human UUID 
 - https://github.com/oklog/ulid (???)
 - https://github.com/chilts/sid (serial IDs)
 - https://datatracker.ietf.org/doc/html/draft-ietf-uuidrev-rfc4122bis (GUID 6?)
+- https://github.com/jetpack-io/typeid (type_guid)
